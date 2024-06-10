@@ -1,4 +1,4 @@
-# coinwave
+# CoinWave
 
 A new Flutter project.
 
