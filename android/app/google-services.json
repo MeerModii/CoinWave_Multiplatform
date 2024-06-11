@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "861038582754",
+    "project_id": "coinwave-backend",
+    "storage_bucket": "coinwave-backend.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:861038582754:android:f18411d4d18fd25fd0b7bb",
+        "android_client_info": {
+          "package_name": "com.example.coinwave"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBT2Hjm81h3DW4g1uXUvrqz4dYmBW9djZ4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

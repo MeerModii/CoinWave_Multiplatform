@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 
+
+final name = "Built By Meer Modi";
+const age = 27;
+
 void main() {
   runApp(const MyApp());
 }
