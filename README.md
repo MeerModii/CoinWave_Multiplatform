@@ -11,7 +11,7 @@ CoinWave is a cross-platform application developed using Flutter and Dart, aimed
 - [License](#license)
 
 ## Features
-- **Cross-Platform:** Runs on both iOS and Android devices.
+- **Cross-Platform:** Runs on iOS, Android, Web, and Windows Desktop devices.
 - **Firebase Authentication:** Secure user authentication using Firebase.
 - **Real-Time Price Data:** Upcoming feature to fetch real-time cryptocurrency prices.
 - **Database Integration:** Upcoming feature to store and manage user data and preferences.
@@ -67,21 +67,6 @@ Users can sign up and log in using their email and password. Firebase handles th
 
 Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-1. **Fork the Project:**
-2. **Create your Feature Branch:**
-    ```bash
-    git checkout -b feature/AmazingFeature
-    ```
-3. **Commit your Changes:**
-    ```bash
-    git commit -m 'Add some AmazingFeature'
-    ```
-4. **Push to the Branch:**
-    ```bash
-    git push origin feature/AmazingFeature
-    ```
-5. **Open a Pull Request:**
-
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
@@ -90,8 +75,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ### Contact
 
-- **GitHub Repository:** [CoinWave](https://github.com/your-username/coinwave)
-- **Email:** your-email@example.com
+- **GitHub Repository:** [CoinWave](https://github.com/MeerModii/CoinWave_Multiplatform)
 
 Feel free to reach out with any questions or suggestions!
 
