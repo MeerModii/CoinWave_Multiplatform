@@ -12,21 +12,18 @@ void main() {
       colorScheme: ColorScheme.fromSeed(seedColor: Colors.lightGreen),
       useMaterial3: true,
     ),
-    home: const HomePage(),
+    home: const RegisterView(),
   ),);
 }
 
-// This is the class for homepage 
-class HomePage extends StatefulWidget {
-  // This is default
-  const HomePage({Key? key}) : super(key: key);
+class RegisterView extends StatefulWidget {
+  const RegisterView({super.key});
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<RegisterView> createState() => _RegisterViewState();
 }
 
-class _HomePageState extends State<HomePage> {
-
+class _RegisterViewState extends State<RegisterView> {
   late final TextEditingController _email;
   late final TextEditingController _password;
 
@@ -43,8 +40,8 @@ class _HomePageState extends State<HomePage> {
     _password.dispose();
     super.dispose();
   }
-
-  //We editted this
+  
+  
   @override
   Widget build(BuildContext context) {
 
@@ -64,7 +61,9 @@ class _HomePageState extends State<HomePage> {
                 options: DefaultFirebaseOptions.currentPlatform,
               ),
         builder: (context, snapshot) {
-          return Column(
+          switch (snapshot.connectionState) {
+            case ConnectionState.done:
+                      return Column(
           children: [
             TextField(
               controller: _email,
@@ -103,9 +102,15 @@ class _HomePageState extends State<HomePage> {
             child: const Text('Register'),),
           ],
         );
+
+            default:
+             return const Text('Loading...');
+          }
         },
 
       ),
     );
   }
 }
+
+// This is the class for homepage 
