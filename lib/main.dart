@@ -1,8 +1,11 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'firebase_options.dart';
 
 // This is the main function that starts the application
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(MaterialApp(
     title: 'Flutter Demo',
     theme: ThemeData(
@@ -56,27 +59,52 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: Colors.white,
 
       // This is for the body of the home page and we are centering it
-      body: Column(
-        children: [
-          TextField(
-            controller: _email,
-            decoration: const InputDecoration(
-              labelText: 'Email',
-              hintText: 'Enter your email'
-            )
-          ),
-          TextField(
-            controller: _password,
-            obscureText: true,
-            decoration: const InputDecoration(
-              labelText: 'Password',
-              hintText: 'Enter your password'
+      body: FutureBuilder(
+        future: Firebase.initializeApp(
+                options: DefaultFirebaseOptions.currentPlatform,
+              ),
+        builder: (context, snapshot) {
+          return Column(
+          children: [
+            TextField(
+              controller: _email,
+              enableSuggestions: false,
+              autocorrect: false,
+              keyboardType: TextInputType.emailAddress,
+        
+              decoration: const InputDecoration(
+                labelText: 'Email',
+                hintText: 'Enter your email'
+              )
             ),
-          ),
-          TextButton(onPressed: () async {
-            
-          },child: const Text('Register'),),
-        ],
+            TextField(
+              controller: _password,
+              obscureText: true,
+              enableSuggestions: false,
+              autocorrect: false,
+        
+              decoration: const InputDecoration(
+                labelText: 'Password',
+                hintText: 'Enter your password'
+              ),
+            ),
+            TextButton(onPressed: () async {
+ 
+              final email = _email.text;
+              final password = _password.text;
+              
+           
+              
+              final userCred = await FirebaseAuth.instance.createUserWithEmailAndPassword( 
+                email: email, 
+                password: password, 
+                );
+            },
+            child: const Text('Register'),),
+          ],
+        );
+        },
+
       ),
     );
   }
