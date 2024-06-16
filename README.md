@@ -11,10 +11,10 @@ CoinWave is a cross-platform application developed using Flutter and Dart, aimed
 - [License](#license)
 
 ## Features
-- **Cross-Platform:** Runs on iOS, Android, Web, and Windows Desktop devices.
-- **Firebase Authentication:** Secure user authentication using Firebase.
-- **Real-Time Price Data:** Upcoming feature to fetch real-time cryptocurrency prices.
-- **Database Integration:** Upcoming feature to store and manage user data and preferences.
+- **Cross-Platform:** Runs on iOS, Android, Web, and Windows Desktop devices
+- **Firebase Authentication:** Secure user authentication using Firebase
+- **Real-Time Price Data:** Upcoming feature to fetch real-time cryptocurrency prices
+- **Database Integration:** Upcoming feature to store and manage user data and preferences
 
 ## Installation
 
