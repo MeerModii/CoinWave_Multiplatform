@@ -81,12 +81,19 @@ class _LoginViewState extends State<LoginView> {
  
               final email = _email.text;
               final password = _password.text;
+              try{
+                final userCred = await FirebaseAuth.instance.signInWithEmailAndPassword( 
+                  email: email, 
+                  password: password, 
+                  );
+                  print(userCred);                
+              }
+              on FirebaseAuthException catch(e){
+                // firebase does not allow the check for indivitual errors like wrong-password etc
+                // it just prints a generic error. 
+                print(e);
+             }
 
-              final userCred = await FirebaseAuth.instance.signInWithEmailAndPassword( 
-                email: email, 
-                password: password, 
-                );
-                print(userCred);
             },
             child: const Text('Login'),),
           ],
