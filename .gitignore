@@ -1,7 +1,3 @@
-## Specific API File
-
-firebase_options.dart
-
 # Miscellaneous
 *.class
 *.log
