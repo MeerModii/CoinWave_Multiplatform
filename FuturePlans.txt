@@ -1,0 +1,6 @@
+API calls to get data -- Done
+basic login -- done
+advanded authentication -- to be done
+Building a database with historic data - To be Done
+setting up storage and functions in azure -- To be Done
+UI graphs etc -- To be done. 
