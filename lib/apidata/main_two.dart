@@ -3,12 +3,14 @@ import 'coimarketcap_api.dart';
 
 void main() {
   runApp(MyApp());
+  
 }
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'CoinMarketCap API Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
