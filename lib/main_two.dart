@@ -9,6 +9,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      // hello world
       title: 'CoinMarketCap API Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
