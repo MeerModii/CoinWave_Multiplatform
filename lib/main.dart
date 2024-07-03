@@ -1,3 +1,4 @@
+import 'package:coinwave/design.dart';
 import 'package:coinwave/login_view.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -15,7 +16,9 @@ void main() {
       colorScheme: ColorScheme.fromSeed(seedColor: Colors.lightGreen),
       useMaterial3: true,
     ),
-    home: const LoginView(),
+    home: const DesignPage(),
+    // home: const LoginView(),
+
   ),);
 }
 

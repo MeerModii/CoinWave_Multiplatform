@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: MyHomePage(),
+
     );
   }
 }
@@ -29,18 +30,30 @@ class _MyHomePageState extends State<MyHomePage> {
   final ApiService apiService = ApiService();
   Future<List<dynamic>>? cryptocurrencies;
 
+
   @override
   void initState() {
     super.initState();
     cryptocurrencies = apiService.fetchCryptocurrencies();
-    print(cryptocurrencies);
+    // print(cryptocurrencies);
+
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('CoinMarketCap API Demo'),
+        title: Text('CoinWave'),
+        centerTitle: true,
+          backgroundColor: Colors.green,
+
+        leading: Container(
+          margin:EdgeInsets.all(10),
+          decoration: BoxDecoration(
+            color: Colors.black,
+            borderRadius: BorderRadius.all(Radius.circular(10)),
+          )
+        )
       ),
       body: FutureBuilder<List<dynamic>>(
         future: cryptocurrencies,
@@ -65,6 +78,7 @@ class _MyHomePageState extends State<MyHomePage> {
           }
         },
       ),
+      backgroundColor: Colors.white,
     );
   }
 }
