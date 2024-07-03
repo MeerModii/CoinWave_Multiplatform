@@ -42,19 +42,34 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('CoinWave'),
-        centerTitle: true,
-          backgroundColor: Colors.green,
-
-        leading: Container(
-          margin:EdgeInsets.all(10),
-          decoration: BoxDecoration(
-            color: Colors.black,
-            borderRadius: BorderRadius.all(Radius.circular(10)),
-          )
-        )
-      ),
+      // appBar: AppBar(
+      //   title: Text('CoinWave'),
+      //   centerTitle: true,
+      //     backgroundColor: Colors.green,
+      //
+      //   leading: Container(
+      //     margin:EdgeInsets.all(10),
+      //     decoration: BoxDecoration(
+      //       color: Colors.black,
+      //       borderRadius: BorderRadius.all(Radius.circular(10)),
+      //     )
+      //   ),
+      //   actions: [
+      //     Container(
+      //       margin: EdgeInsets.only(right: 10.0), // Adjust margin as needed
+      //       child: IconButton(
+      //         icon: Icon(
+      //           Icons.refresh,
+      //           size: 35.0, // Adjust icon size as needed
+      //         ),
+      //         onPressed: () {
+      //           cryptocurrencies = apiService.fetchCryptocurrencies();
+      //           setState(() {});
+      //         },
+      //       ),
+      //     )
+      //   ],
+      // ),
       body: FutureBuilder<List<dynamic>>(
         future: cryptocurrencies,
         builder: (context, snapshot) {
