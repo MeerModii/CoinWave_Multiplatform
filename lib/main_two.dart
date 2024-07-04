@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'coimarketcap_api.dart';
 
 void main() {
@@ -10,13 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      // hello world
-      title: 'CoinMarketCap API Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
       home: MyHomePage(),
-
     );
   }
 }
@@ -30,46 +25,35 @@ class _MyHomePageState extends State<MyHomePage> {
   final ApiService apiService = ApiService();
   Future<List<dynamic>>? cryptocurrencies;
 
-
   @override
   void initState() {
     super.initState();
     cryptocurrencies = apiService.fetchCryptocurrencies();
-    // print(cryptocurrencies);
-
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   title: Text('CoinWave'),
-      //   centerTitle: true,
-      //     backgroundColor: Colors.green,
-      //
-      //   leading: Container(
-      //     margin:EdgeInsets.all(10),
-      //     decoration: BoxDecoration(
-      //       color: Colors.black,
-      //       borderRadius: BorderRadius.all(Radius.circular(10)),
-      //     )
-      //   ),
-      //   actions: [
-      //     Container(
-      //       margin: EdgeInsets.only(right: 10.0), // Adjust margin as needed
-      //       child: IconButton(
-      //         icon: Icon(
-      //           Icons.refresh,
-      //           size: 35.0, // Adjust icon size as needed
-      //         ),
-      //         onPressed: () {
-      //           cryptocurrencies = apiService.fetchCryptocurrencies();
-      //           setState(() {});
-      //         },
-      //       ),
-      //     )
-      //   ],
-      // ),
+      appBar: AppBar(
+        backgroundColor: Colors.green[500],
+        elevation: 0,
+        title: Text('C O I N W A V E'),
+        centerTitle: true,
+        leading: IconButton(
+          onPressed: () {
+            // menu open logic here
+          },
+          icon: Icon(Icons.menu),
+        ),
+        actions: [
+          IconButton(
+            onPressed: () {
+              // profile open logic here
+            },
+            icon: Icon(Icons.person),
+          ),
+        ],
+      ),
       body: FutureBuilder<List<dynamic>>(
         future: cryptocurrencies,
         builder: (context, snapshot) {
@@ -85,6 +69,7 @@ class _MyHomePageState extends State<MyHomePage> {
               itemBuilder: (context, index) {
                 var cryptocurrency = snapshot.data![index];
                 return ListTile(
+                  leading: Icon(Icons.currency_bitcoin),
                   title: Text(cryptocurrency['name']),
                   subtitle: Text('Price: \$${cryptocurrency['quote']['USD']['price']}'),
                 );
@@ -93,7 +78,24 @@ class _MyHomePageState extends State<MyHomePage> {
           }
         },
       ),
-      backgroundColor: Colors.white,
+      bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Colors.green[500],
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.paid),
+            label: 'Portfolio',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.analytics),
+            label: 'Analytics',
+          ),
+        ],
+        selectedItemColor: Colors.white,
+      ),
     );
   }
 }
