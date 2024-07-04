@@ -1,8 +1,8 @@
-import 'package:coinwave/firebase_options.dart';
+import 'package:coinwave/backend/firebase_options.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:coinwave/register_view.dart';
+import 'package:coinwave/pages/register_view.dart';
 
 class LoginView extends StatefulWidget {
   const LoginView({Key? key}) : super(key: key);
