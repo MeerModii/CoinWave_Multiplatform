@@ -72,13 +72,17 @@ class _HomePageState extends State<HomePage> {
                   return Center(child: Text('Error: ${snapshot.error}'));
                 } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
                   return Center(child: Text('No data available'));
-                } else {
+                }
+                else {
                   return ListView.builder(
                     itemCount: snapshot.data!.length,
                     itemBuilder: (context, index) {
                       var cryptocurrency = snapshot.data![index];
+                      var logoUrl = 'https://s2.coinmarketcap.com/static/img/coins/64x64/${cryptocurrency['id']}.png';
                       return ListTile(
-                        leading: Icon(Icons.currency_bitcoin),
+                        leading: Image.network(logoUrl, width: 40, height: 40, errorBuilder: (context, error, stackTrace) {
+                          return Icon(Icons.error);
+                        }),
                         title: Text(cryptocurrency['name']),
                         subtitle: Text('Price: \$${cryptocurrency['quote']['USD']['price']}'),
                       );
