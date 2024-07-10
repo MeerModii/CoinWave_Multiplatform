@@ -67,6 +67,8 @@ Users can sign up and log in using their email and password. Firebase handles th
 
 Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
+If you would like to reach out and work on this in depth contact me via my email: meer2modi@gmail.com
+
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
@@ -76,8 +78,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 ### Contact
 
 - **GitHub Repository:** [CoinWave](https://github.com/MeerModii/CoinWave_Multiplatform)
-
-Feel free to reach out with any questions or suggestions!
 
 ---
 
