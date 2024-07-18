@@ -45,7 +45,7 @@ class _HomePageState extends State<HomePage> {
             padding: const EdgeInsets.all(20),
             child: TextField(
               decoration: InputDecoration(
-                hintText: 'Search Stocks or CyptoCurrencies',
+                hintText: 'Search Stocks or Cryptocurrencies',
                 prefixIcon: Icon(Icons.travel_explore),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(20),
@@ -72,19 +72,22 @@ class _HomePageState extends State<HomePage> {
                   return Center(child: Text('Error: ${snapshot.error}'));
                 } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
                   return Center(child: Text('No data available'));
-                }
-                else {
+                } else {
                   return ListView.builder(
                     itemCount: snapshot.data!.length,
                     itemBuilder: (context, index) {
                       var cryptocurrency = snapshot.data![index];
-                      var logoUrl = 'https://s2.coinmarketcap.com/static/img/coins/64x64/${cryptocurrency['id']}.png';
+                      var logoUrl =
+                          'https://s2.coinmarketcap.com/static/img/coins/64x64/${cryptocurrency['id']}.png';
                       return ListTile(
-                        leading: Image.network(logoUrl, width: 40, height: 40, errorBuilder: (context, error, stackTrace) {
-                          return Icon(Icons.error);
-                        }),
+                        leading: Image.network(logoUrl,
+                            width: 40,
+                            height: 40, errorBuilder: (context, error, stackTrace) {
+                              return Icon(Icons.error);
+                            }),
                         title: Text(cryptocurrency['name']),
-                        subtitle: Text('Price: \$${cryptocurrency['quote']['USD']['price']}'),
+                        subtitle: Text(
+                            'Price: \$${cryptocurrency['quote']['USD']['price']}'),
                       );
                     },
                   );
@@ -93,24 +96,6 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
         ],
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.green[500],
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.paid),
-            label: 'Portfolio',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.analytics),
-            label: 'Analytics',
-          ),
-        ],
-        selectedItemColor: Colors.white,
       ),
     );
   }
