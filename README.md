@@ -30,4 +30,4 @@ Welcome to CoinWave, your ultimate Flutter-based financial asset management soft
     - Integration with additional financial APIs
 
 ## 📬 Contact
-    - For any inquiries or feedback, feel free to reach out to us at your-email@example.com.
+    - For any inquiries or feedback, feel free to reach out at mnm23@njit.edu.
