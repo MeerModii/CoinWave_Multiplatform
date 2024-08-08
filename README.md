@@ -25,11 +25,9 @@ Welcome to CoinWave, your ultimate Flutter-based financial asset management soft
   - [Firebase](https://firebase.google.com) - For secure authentication and real-time database management.
 
 ## 🛠️ Under Development
-
-    Enhanced portfolio management features
-    Advanced risk assessment tools
-    Integration with additional financial APIs
+Enhanced portfolio management features
+Advanced risk assessment tools
+Integration with additional financial APIs
 
 ## 📬 Contact
-
-    For any inquiries or feedback, feel free to reach out at mnm23@njit.edu.
+For any inquiries or feedback, feel free to reach out at mnm23@njit.edu.
