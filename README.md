@@ -1,4 +1,4 @@
-# Financial Assets Analysis Software - Flutter Multiplatform 🌟
+# Financial Assets Analysis Software 🌟
 
 Welcome to CoinWave, your ultimate Flutter-based financial asset management software! CoinWave helps you track, analyze, and manage your investments in stocks and cryptocurrencies with ease and efficiency.
 
