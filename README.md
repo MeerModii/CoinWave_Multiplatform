@@ -30,4 +30,5 @@ Advanced risk assessment tools
 Integration with additional financial APIs
 
 ## 📬 Contact
+Developer - Meer Modi
 For any inquiries or feedback, feel free to reach out at mnm23@njit.edu.
